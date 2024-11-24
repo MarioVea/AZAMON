@@ -16,7 +16,7 @@ namespace AZAMON
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new formularios.frmProducto());
+            Application.Run(new frmMenu());
         }
     }
 }

@@ -40,10 +40,10 @@
             this.bodegaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inventarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.carritoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.domiciliosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.domiciliosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -105,6 +105,7 @@
             this.productoToolStripMenuItem.Name = "productoToolStripMenuItem";
             this.productoToolStripMenuItem.Size = new System.Drawing.Size(252, 28);
             this.productoToolStripMenuItem.Text = "Producto";
+            this.productoToolStripMenuItem.Click += new System.EventHandler(this.productoToolStripMenuItem_Click);
             // 
             // artículosToolStripMenuItem
             // 
@@ -120,20 +121,28 @@
             // bodegaToolStripMenuItem
             // 
             this.bodegaToolStripMenuItem.Name = "bodegaToolStripMenuItem";
-            this.bodegaToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.bodegaToolStripMenuItem.Size = new System.Drawing.Size(201, 28);
             this.bodegaToolStripMenuItem.Text = "Almacen";
             // 
             // inventarioToolStripMenuItem
             // 
             this.inventarioToolStripMenuItem.Name = "inventarioToolStripMenuItem";
-            this.inventarioToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.inventarioToolStripMenuItem.Size = new System.Drawing.Size(201, 28);
             this.inventarioToolStripMenuItem.Text = "Inventario";
             // 
             // carritoToolStripMenuItem
             // 
             this.carritoToolStripMenuItem.Name = "carritoToolStripMenuItem";
-            this.carritoToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.carritoToolStripMenuItem.Size = new System.Drawing.Size(201, 28);
             this.carritoToolStripMenuItem.Text = "Carrito";
+            // 
+            // domiciliosToolStripMenuItem
+            // 
+            this.domiciliosToolStripMenuItem.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.domiciliosToolStripMenuItem.Name = "domiciliosToolStripMenuItem";
+            this.domiciliosToolStripMenuItem.Size = new System.Drawing.Size(130, 27);
+            this.domiciliosToolStripMenuItem.Text = "Domicilios";
+            this.domiciliosToolStripMenuItem.Click += new System.EventHandler(this.domiciliosToolStripMenuItem_Click);
             // 
             // toolStrip1
             // 
@@ -168,13 +177,6 @@
             this.toolStripButton2.Size = new System.Drawing.Size(34, 36);
             this.toolStripButton2.Text = "toolStripButton2";
             // 
-            // domiciliosToolStripMenuItem
-            // 
-            this.domiciliosToolStripMenuItem.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.domiciliosToolStripMenuItem.Name = "domiciliosToolStripMenuItem";
-            this.domiciliosToolStripMenuItem.Size = new System.Drawing.Size(130, 27);
-            this.domiciliosToolStripMenuItem.Text = "Domicilios";
-            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
@@ -184,7 +186,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMenu";
             this.Text = "Form1";
             this.menuStrip1.ResumeLayout(false);

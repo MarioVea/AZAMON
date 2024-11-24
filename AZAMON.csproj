@@ -46,9 +46,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Busquedas\frmBusquedaDomicilio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busquedas\frmBusquedaDomicilio.Designer.cs">
+      <DependentUpon>frmBusquedaDomicilio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Busquedas\frmBusquedaProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busquedas\frmBusquedaProducto.Designer.cs">
+      <DependentUpon>frmBusquedaProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Clases\Conexion.cs" />
+    <Compile Include="Clases\Domicilio.cs" />
     <Compile Include="Clases\Producto.cs" />
     <Compile Include="Clases\tools.cs" />
+    <Compile Include="formularios\frmDomicilio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\frmDomicilio.Designer.cs">
+      <DependentUpon>frmDomicilio.cs</DependentUpon>
+    </Compile>
     <Compile Include="formularios\frmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +82,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Busquedas\frmBusquedaDomicilio.resx">
+      <DependentUpon>frmBusquedaDomicilio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Busquedas\frmBusquedaProducto.resx">
+      <DependentUpon>frmBusquedaProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\frmDomicilio.resx">
+      <DependentUpon>frmDomicilio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formularios\frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>

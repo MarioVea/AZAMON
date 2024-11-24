@@ -44,7 +44,7 @@
             this.tsBuscar = new System.Windows.Forms.ToolStripButton();
             this.tsLimpiar = new System.Windows.Forms.ToolStripButton();
             this.tsEliminar = new System.Windows.Forms.ToolStripButton();
-            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -131,7 +131,7 @@
             // 
             this.rtxtDescripcion.Location = new System.Drawing.Point(65, 265);
             this.rtxtDescripcion.Name = "rtxtDescripcion";
-            this.rtxtDescripcion.Size = new System.Drawing.Size(446, 254);
+            this.rtxtDescripcion.Size = new System.Drawing.Size(669, 254);
             this.rtxtDescripcion.TabIndex = 11;
             this.rtxtDescripcion.Text = "";
             // 
@@ -146,7 +146,7 @@
             this.tsEliminar});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1300, 39);
+            this.toolStrip1.Size = new System.Drawing.Size(791, 39);
             this.toolStrip1.TabIndex = 12;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -170,6 +170,7 @@
             this.tsBuscar.Name = "tsBuscar";
             this.tsBuscar.Size = new System.Drawing.Size(36, 36);
             this.tsBuscar.Text = "Buscar";
+            this.tsBuscar.Click += new System.EventHandler(this.tsBuscar_Click);
             // 
             // tsLimpiar
             // 
@@ -180,6 +181,7 @@
             this.tsLimpiar.Name = "tsLimpiar";
             this.tsLimpiar.Size = new System.Drawing.Size(36, 36);
             this.tsLimpiar.Text = "Limpiar";
+            this.tsLimpiar.Click += new System.EventHandler(this.tsLimpiar_Click);
             // 
             // tsEliminar
             // 
@@ -190,16 +192,18 @@
             this.tsEliminar.Name = "tsEliminar";
             this.tsEliminar.Size = new System.Drawing.Size(36, 36);
             this.tsEliminar.Text = "Eliminar";
+            this.tsEliminar.Click += new System.EventHandler(this.tsEliminar_Click);
             // 
-            // btnGuardar
+            // btnBuscar
             // 
-            this.btnGuardar.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(512, 116);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(168, 51);
-            this.btnGuardar.TabIndex = 13;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Location = new System.Drawing.Point(512, 116);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(168, 51);
+            this.btnBuscar.TabIndex = 13;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // frmProducto
             // 
@@ -207,8 +211,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(1300, 647);
-            this.Controls.Add(this.btnGuardar);
+            this.ClientSize = new System.Drawing.Size(791, 551);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.rtxtDescripcion);
             this.Controls.Add(this.cbCategoria);
@@ -223,8 +227,10 @@
             this.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmProducto";
-            this.Text = "frmProducto";
+            this.Text = "Registro de Productos";
             this.Load += new System.EventHandler(this.frmProducto_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
@@ -250,6 +256,6 @@
         private System.Windows.Forms.ToolStripButton tsBuscar;
         private System.Windows.Forms.ToolStripButton tsLimpiar;
         private System.Windows.Forms.ToolStripButton tsEliminar;
-        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button btnBuscar;
     }
 }
