@@ -29,5 +29,11 @@ namespace AZAMON
             frmDomicilio a = new frmDomicilio();
             a.ShowDialog();
         }
+
+        private void usuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUsuario a = new frmUsuario();
+            a.ShowDialog();
+        }
     }
 }

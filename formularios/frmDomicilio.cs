@@ -96,5 +96,24 @@ namespace AZAMON.formularios
                 txtCP.Text = a.dgDomicilios.Rows[i].Cells["CP"].Value.ToString();
             }
         }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            string query = $"select * from DOMICILIO where id = {int.Parse(txtId.Text)}";
+            SqlCommand cmd = new SqlCommand(query,con);
+            con.Open();
+            SqlDataReader rd =cmd.ExecuteReader();
+            if (rd.Read())
+            {
+                txtId.Text = rd["id"].ToString();
+                txtCalle.Text = rd["Calle"].ToString();
+                txtColonia.Text = rd["Colonia"].ToString();
+                txtNumeroExterior.Text = rd["No_Exterior"].ToString();
+                txtNumeroInterior.Text = rd["No_Interior"].ToString();
+                rtxtReferencias.Text = rd["Referencias"].ToString();
+                txtCP.Text = rd["CP"].ToString();
+            }
+            con.Close();
+        }
     }
 }

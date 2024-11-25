@@ -58,8 +58,15 @@
     <Compile Include="Busquedas\frmBusquedaProducto.Designer.cs">
       <DependentUpon>frmBusquedaProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Busquedas\frmBusquedaUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busquedas\frmBusquedaUsuario.Designer.cs">
+      <DependentUpon>frmBusquedaUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Clases\Conexion.cs" />
     <Compile Include="Clases\Domicilio.cs" />
+    <Compile Include="Clases\Usuario.cs" />
     <Compile Include="Clases\Producto.cs" />
     <Compile Include="Clases\tools.cs" />
     <Compile Include="formularios\frmDomicilio.cs">
@@ -80,6 +87,12 @@
     <Compile Include="formularios\frmProducto.Designer.cs">
       <DependentUpon>frmProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="formularios\frmUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\frmUsuario.Designer.cs">
+      <DependentUpon>frmUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Busquedas\frmBusquedaDomicilio.resx">
@@ -87,6 +100,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Busquedas\frmBusquedaProducto.resx">
       <DependentUpon>frmBusquedaProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Busquedas\frmBusquedaUsuario.resx">
+      <DependentUpon>frmBusquedaUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formularios\frmDomicilio.resx">
       <DependentUpon>frmDomicilio.cs</DependentUpon>
@@ -96,6 +112,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formularios\frmProducto.resx">
       <DependentUpon>frmProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\frmUsuario.resx">
+      <DependentUpon>frmUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
