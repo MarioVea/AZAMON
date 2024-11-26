@@ -51,6 +51,9 @@
             this.txtContrasena = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.chbvendedor = new System.Windows.Forms.CheckBox();
+            this.txtRFC = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -195,7 +198,7 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(678, 94);
+            this.txtEmail.Location = new System.Drawing.Point(209, 343);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(224, 31);
             this.txtEmail.TabIndex = 25;
@@ -203,7 +206,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(522, 88);
+            this.label6.Location = new System.Drawing.Point(53, 337);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(55, 29);
             this.label6.TabIndex = 24;
@@ -211,7 +214,7 @@
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(678, 144);
+            this.txtTelefono.Location = new System.Drawing.Point(684, 91);
             this.txtTelefono.MaxLength = 10;
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(224, 31);
@@ -220,7 +223,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(522, 138);
+            this.label7.Location = new System.Drawing.Point(528, 85);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(86, 29);
             this.label7.TabIndex = 26;
@@ -228,7 +231,7 @@
             // 
             // txtContrasena
             // 
-            this.txtContrasena.Location = new System.Drawing.Point(678, 192);
+            this.txtContrasena.Location = new System.Drawing.Point(684, 139);
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.Size = new System.Drawing.Size(224, 31);
             this.txtContrasena.TabIndex = 31;
@@ -236,7 +239,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(522, 186);
+            this.label9.Location = new System.Drawing.Point(528, 133);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(109, 29);
             this.label9.TabIndex = 30;
@@ -244,7 +247,7 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(678, 237);
+            this.btnBuscar.Location = new System.Drawing.Point(684, 280);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(121, 41);
             this.btnBuscar.TabIndex = 32;
@@ -252,12 +255,41 @@
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
+            // chbvendedor
+            // 
+            this.chbvendedor.AutoSize = true;
+            this.chbvendedor.Location = new System.Drawing.Point(684, 183);
+            this.chbvendedor.Name = "chbvendedor";
+            this.chbvendedor.Size = new System.Drawing.Size(271, 33);
+            this.chbvendedor.TabIndex = 33;
+            this.chbvendedor.Text = "Registrarme como vendedor";
+            this.chbvendedor.UseVisualStyleBackColor = true;
+            // 
+            // txtRFC
+            // 
+            this.txtRFC.Location = new System.Drawing.Point(684, 237);
+            this.txtRFC.Name = "txtRFC";
+            this.txtRFC.Size = new System.Drawing.Size(224, 31);
+            this.txtRFC.TabIndex = 34;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(528, 237);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(48, 29);
+            this.label8.TabIndex = 35;
+            this.label8.Text = "RFC";
+            // 
             // frmUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1099, 565);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.txtRFC);
+            this.Controls.Add(this.chbvendedor);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtContrasena);
             this.Controls.Add(this.label9);
@@ -312,5 +344,8 @@
         private System.Windows.Forms.TextBox txtContrasena;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.CheckBox chbvendedor;
+        private System.Windows.Forms.TextBox txtRFC;
+        private System.Windows.Forms.Label label8;
     }
 }

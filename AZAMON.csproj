@@ -52,6 +52,18 @@
     <Compile Include="Busquedas\frmBusquedaDomicilio.Designer.cs">
       <DependentUpon>frmBusquedaDomicilio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Busquedas\frmBusquedaMetodoPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busquedas\frmBusquedaMetodoPago.Designer.cs">
+      <DependentUpon>frmBusquedaMetodoPago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Busquedas\frmBusquedaPaqueteria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busquedas\frmBusquedaPaqueteria.Designer.cs">
+      <DependentUpon>frmBusquedaPaqueteria.cs</DependentUpon>
+    </Compile>
     <Compile Include="Busquedas\frmBusquedaProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,8 +76,16 @@
     <Compile Include="Busquedas\frmBusquedaUsuario.Designer.cs">
       <DependentUpon>frmBusquedaUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Busquedas\frmBusquedaVendedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busquedas\frmBusquedaVendedor.Designer.cs">
+      <DependentUpon>frmBusquedaVendedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Clases\Conexion.cs" />
     <Compile Include="Clases\Domicilio.cs" />
+    <Compile Include="Clases\MetodoPago.cs" />
+    <Compile Include="Clases\Paqueteria.cs" />
     <Compile Include="Clases\Usuario.cs" />
     <Compile Include="Clases\Producto.cs" />
     <Compile Include="Clases\tools.cs" />
@@ -80,6 +100,18 @@
     </Compile>
     <Compile Include="formularios\frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\frmMetodoPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\frmMetodoPago.Designer.cs">
+      <DependentUpon>frmMetodoPago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\frmPaqueteria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\frmPaqueteria.Designer.cs">
+      <DependentUpon>frmPaqueteria.cs</DependentUpon>
     </Compile>
     <Compile Include="formularios\frmProducto.cs">
       <SubType>Form</SubType>
@@ -98,17 +130,32 @@
     <EmbeddedResource Include="Busquedas\frmBusquedaDomicilio.resx">
       <DependentUpon>frmBusquedaDomicilio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Busquedas\frmBusquedaMetodoPago.resx">
+      <DependentUpon>frmBusquedaMetodoPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Busquedas\frmBusquedaPaqueteria.resx">
+      <DependentUpon>frmBusquedaPaqueteria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Busquedas\frmBusquedaProducto.resx">
       <DependentUpon>frmBusquedaProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Busquedas\frmBusquedaUsuario.resx">
       <DependentUpon>frmBusquedaUsuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Busquedas\frmBusquedaVendedor.resx">
+      <DependentUpon>frmBusquedaVendedor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formularios\frmDomicilio.resx">
       <DependentUpon>frmDomicilio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formularios\frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\frmMetodoPago.resx">
+      <DependentUpon>frmMetodoPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\frmPaqueteria.resx">
+      <DependentUpon>frmPaqueteria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formularios\frmProducto.resx">
       <DependentUpon>frmProducto.cs</DependentUpon>

@@ -49,7 +49,21 @@ namespace AZAMON.formularios
                 u.id_Domicilio = int.Parse(a.dgDomicilios.Rows[i].Cells["id"].Value.ToString());
             }
             MessageBox.Show(u.guardar());
+            registrarvendedor();
             limpiar();
+        }
+
+        void registrarvendedor()
+        {
+            if (chbvendedor.Checked && (t.encontrar("USUARIO",int.Parse(txtId.Text))))
+            {
+                string query = $"insert into VENDEDOR values({t.consecutivo("VENDEDOR")},{int.Parse(txtId.Text)},{txtRFC.Text}')";
+                SqlCommand cmd = new SqlCommand(query,con);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+
+            }
         }
 
         void limpiar()

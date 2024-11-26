@@ -1,4 +1,5 @@
-﻿using AZAMON.formularios;
+﻿using AZAMON.Busquedas;
+using AZAMON.formularios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -33,6 +34,24 @@ namespace AZAMON
         private void usuarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmUsuario a = new frmUsuario();
+            a.ShowDialog();
+        }
+
+        private void vendedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBusquedaVendedor a = new frmBusquedaVendedor();
+            a.ShowDialog();
+        }
+
+        private void metodoDePagoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMetodoPago a = new frmMetodoPago();
+            a.ShowDialog();
+        }
+
+        private void paqueteríaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPaqueteria a = new frmPaqueteria();
             a.ShowDialog();
         }
     }
