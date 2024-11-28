@@ -42,8 +42,8 @@
             this.carritoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.domiciliosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.tsVenta = new System.Windows.Forms.ToolStripButton();
+            this.tsEntrega = new System.Windows.Forms.ToolStripButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
@@ -130,6 +130,7 @@
             this.bodegaToolStripMenuItem.Name = "bodegaToolStripMenuItem";
             this.bodegaToolStripMenuItem.Size = new System.Drawing.Size(201, 28);
             this.bodegaToolStripMenuItem.Text = "Almacen";
+            this.bodegaToolStripMenuItem.Click += new System.EventHandler(this.bodegaToolStripMenuItem_Click);
             // 
             // inventarioToolStripMenuItem
             // 
@@ -157,33 +158,34 @@
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Left;
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
-            this.toolStripButton2});
+            this.tsVenta,
+            this.tsEntrega});
             this.toolStrip1.Location = new System.Drawing.Point(0, 31);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(37, 616);
+            this.toolStrip1.Size = new System.Drawing.Size(40, 616);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripButton1
+            // tsVenta
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(34, 36);
-            this.toolStripButton1.Text = "toolStripButton1";
+            this.tsVenta.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsVenta.Image = ((System.Drawing.Image)(resources.GetObject("tsVenta.Image")));
+            this.tsVenta.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsVenta.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsVenta.Name = "tsVenta";
+            this.tsVenta.Size = new System.Drawing.Size(37, 36);
+            this.tsVenta.Text = "Venta";
+            this.tsVenta.Click += new System.EventHandler(this.tsVenta_Click);
             // 
-            // toolStripButton2
+            // tsEntrega
             // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(34, 36);
-            this.toolStripButton2.Text = "toolStripButton2";
+            this.tsEntrega.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsEntrega.Image = ((System.Drawing.Image)(resources.GetObject("tsEntrega.Image")));
+            this.tsEntrega.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsEntrega.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsEntrega.Name = "tsEntrega";
+            this.tsEntrega.Size = new System.Drawing.Size(37, 36);
+            this.tsEntrega.Text = "Entrega";
             // 
             // pictureBox1
             // 
@@ -201,7 +203,7 @@
             this.label1.Font = new System.Drawing.Font("Cooper Black", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(371, 90);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(410, 39);
+            this.label1.Size = new System.Drawing.Size(399, 38);
             this.label1.TabIndex = 3;
             this.label1.Text = "Bienvenido a AZAMON";
             // 
@@ -243,8 +245,8 @@
         private System.Windows.Forms.ToolStripMenuItem inventarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem carritoToolStripMenuItem;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripButton tsVenta;
+        private System.Windows.Forms.ToolStripButton tsEntrega;
         private System.Windows.Forms.ToolStripMenuItem domiciliosToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem vendedorToolStripMenuItem;

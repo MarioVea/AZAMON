@@ -42,11 +42,11 @@ namespace AZAMON.formularios
             };
             if (t.encontrar("PRODUCTO",int.Parse(txtId.Text)))
             {
-                MessageBox.Show(p.actualizar());
+                MessageBox.Show(p.actualizar()); limpiar();
             }
             else
             {
-                MessageBox.Show(p.guardar());
+                MessageBox.Show(p.guardar()); limpiar();
             }
         }
         void llenarcb()
@@ -102,7 +102,7 @@ namespace AZAMON.formularios
                 txtId.Text = a.dgProductos.Rows[i].Cells["id"].Value.ToString();
                 txtNombre.Text = a.dgProductos.Rows[i].Cells["Producto"].Value.ToString();
                 rtxtDescripcion.Text = a.dgProductos.Rows[i].Cells["Descripcion"].Value.ToString();
-                cbCategoria.SelectedText = a.dgProductos.Rows[i].Cells["Categoria"].Value.ToString();
+                cbCategoria.SelectedValue = int.Parse(a.dgProductos.Rows[i].Cells["idCategoria"].Value.ToString());
                 txtPrecio.Text = a.dgProductos.Rows[i].Cells["Precio"].Value.ToString();
             }
         }

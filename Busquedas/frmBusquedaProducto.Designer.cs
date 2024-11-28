@@ -101,6 +101,8 @@
             this.Controls.Add(this.txtNombre);
             this.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmBusquedaProducto";
             this.Text = "BusquedaProducto";
             ((System.ComponentModel.ISupportInitialize)(this.dgProductos)).EndInit();

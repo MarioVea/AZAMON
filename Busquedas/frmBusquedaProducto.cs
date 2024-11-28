@@ -24,7 +24,7 @@ namespace AZAMON.Busquedas
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            string query = $"select p.id,p.Nombre as Producto,p.Descripcion,p.Precio,c.Nombre as  Categoria from PRODUCTO p inner join CATEGORIA c on p.id_Categoria = c.id where p.Nombre like '%{txtNombre.Text}%'";
+            string query = $"select p.id,p.Nombre as Producto,p.Descripcion,p.Precio,c.id as idCategoria,c.Nombre as  Categoria from PRODUCTO p inner join CATEGORIA c on p.id_Categoria = c.id where p.Nombre like '%{txtNombre.Text}%'";
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(query,con);
             con.Open();

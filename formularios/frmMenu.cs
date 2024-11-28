@@ -54,5 +54,17 @@ namespace AZAMON
             frmPaqueteria a = new frmPaqueteria();
             a.ShowDialog();
         }
+
+        private void bodegaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAlmacen a = new frmAlmacen();
+            a.ShowDialog();
+        }
+
+        private void tsVenta_Click(object sender, EventArgs e)
+        {
+            frmVenta a = new frmVenta();
+            a.ShowDialog();
+        }
     }
 }

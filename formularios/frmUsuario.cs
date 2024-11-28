@@ -57,12 +57,17 @@ namespace AZAMON.formularios
         {
             if (chbvendedor.Checked && (t.encontrar("USUARIO",int.Parse(txtId.Text))))
             {
-                string query = $"insert into VENDEDOR values({t.consecutivo("VENDEDOR")},{int.Parse(txtId.Text)},{txtRFC.Text}')";
+                txtRFC.ReadOnly = true;
+                string query = $"insert into VENDEDOR values({t.consecutivo("VENDEDOR")},{int.Parse(txtId.Text)},'{txtRFC.Text}')";
                 SqlCommand cmd = new SqlCommand(query,con);
                 con.Open();
                 cmd.ExecuteNonQuery();
                 con.Close();
 
+            }
+            else if (chbvendedor.Checked == false)
+            {
+                txtRFC.ReadOnly = false;
             }
         }
 
