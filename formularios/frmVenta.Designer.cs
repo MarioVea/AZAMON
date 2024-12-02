@@ -50,6 +50,7 @@
             this.btnAceptar = new System.Windows.Forms.Button();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.txtImporte = new System.Windows.Forms.TextBox();
+            this.txtTotal = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgDetalle)).BeginInit();
             this.SuspendLayout();
             // 
@@ -157,6 +158,7 @@
             this.cbClientes.Name = "cbClientes";
             this.cbClientes.Size = new System.Drawing.Size(561, 37);
             this.cbClientes.TabIndex = 11;
+            this.cbClientes.Leave += new System.EventHandler(this.cbClientes_Leave);
             // 
             // cbVendedores
             // 
@@ -206,7 +208,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(1216, 526);
+            this.btnCancelar.Location = new System.Drawing.Point(1217, 556);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(136, 52);
             this.btnCancelar.TabIndex = 19;
@@ -215,12 +217,13 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(1061, 526);
+            this.btnAceptar.Location = new System.Drawing.Point(1062, 556);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(136, 52);
             this.btnAceptar.TabIndex = 20;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // txtCantidad
             // 
@@ -238,12 +241,21 @@
             this.txtImporte.Size = new System.Drawing.Size(174, 31);
             this.txtImporte.TabIndex = 22;
             // 
+            // txtTotal
+            // 
+            this.txtTotal.Enabled = false;
+            this.txtTotal.Location = new System.Drawing.Point(1195, 509);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(157, 31);
+            this.txtTotal.TabIndex = 23;
+            // 
             // frmVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1485, 620);
+            this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.txtImporte);
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.btnAceptar);
@@ -299,5 +311,6 @@
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.TextBox txtImporte;
+        private System.Windows.Forms.TextBox txtTotal;
     }
 }

@@ -41,6 +41,12 @@ namespace AZAMON.formularios
             m.CVV = txtCVV.Text;
             m.Fecha_Vencimiento = dtpFechVencimiento.Value;
             m.Titular = txtTitular.Text;
+            if (m.Tipo == 0)
+            {
+                m.Nombre_Tarjeta = "Crédito";
+            }
+            else m.Nombre_Tarjeta = "Débito";
+
             frmBusquedaUsuario u = new frmBusquedaUsuario();
             u.ShowDialog();
             if (u.DialogResult == DialogResult.OK)
@@ -54,6 +60,7 @@ namespace AZAMON.formularios
         {
             cbTipo.Items.Add("Crédito");
             cbTipo.Items.Add("Débito");
+
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {

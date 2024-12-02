@@ -23,6 +23,7 @@ namespace AZAMON.Clases
         public string CVV { get; set; }
         public DateTime Fecha_Vencimiento { get; set; }
         public string Titular { get; set; }
+        public string  Nombre_Tarjeta { get; set; }
 
 
         public string guardar()
@@ -35,7 +36,7 @@ namespace AZAMON.Clases
             else
             {
                 string msj = "";
-                string query = $"insert into METODO_PAGO values({id},{id_Usuario},{Tipo},'{Numero_Tarjeta}','{CVV}','{Fecha_Vencimiento}','{Titular}')";
+                string query = $"insert into METODO_PAGO values({id},{id_Usuario},{Tipo},'{Numero_Tarjeta}','{CVV}','{Fecha_Vencimiento}','{Titular}','{Nombre_Tarjeta}')";
                 SqlCommand cmd = new SqlCommand(query, con);
                 con.Open();
                 cmd.ExecuteNonQuery();

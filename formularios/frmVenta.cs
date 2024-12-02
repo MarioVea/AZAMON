@@ -37,6 +37,7 @@ namespace AZAMON.formularios
             cbProducto();
             config();
             txtCantidad.Text = "1";
+            txtTotal.Text = "$" + sumatoria().ToString();
         }
         DataTable dt = new DataTable();
         void config()
@@ -112,9 +113,17 @@ namespace AZAMON.formularios
 
         void cbMetodos()
         {
-            cbMetodo.Items.Add("Crédito");
-            cbMetodo.Items.Add("Débito");
-            cbMetodo.SelectedIndex = 0;
+            int cliente = int.Parse(cbClientes.SelectedValue.ToString());
+            string query = $"select * from METODO_PAGO where id_Usuario = {cliente}";
+            SqlCommand cmd = new SqlCommand(query,con);
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            con.Open(); 
+            da.Fill(dt);
+            con.Close();
+            cbMetodo.DisplayMember = "Nombre_Tarjeta";
+            cbMetodo.ValueMember = "Tipo";
+            cbMetodo.DataSource = dt;
         }
         void cbProducto()
         {
@@ -134,11 +143,70 @@ namespace AZAMON.formularios
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             agregar();
+            if (dgDetalle.Rows.Count > 0)
+            {
+                txtTotal.Text = sumatoria().ToString();
+            }
         }
 
         private void txtCantidad_Leave(object sender, EventArgs e)
         {
             txtImporte.Text = Convert.ToString(int.Parse(txtCantidad.Text) * obtenerprecio());
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            Venta v = new Venta
+            {
+                id = int.Parse(txtId.Text),
+                id_Usuario = int.Parse(cbClientes.SelectedValue.ToString()),
+                id_Vendedor = int.Parse(cbVendedores.SelectedValue.ToString()),
+                Estado = 0,
+                Fecha = dtpFecha.Value,
+                Total = decimal.Parse(txtTotal.Text),
+            };
+            int cliente = int.Parse(cbClientes.SelectedValue.ToString());
+            int tipo = int.Parse(cbMetodo.SelectedValue.ToString());
+            string query = $"select * from METODO_PAGO where id_Usuario = {cliente} and Tipo = {tipo}";
+            SqlCommand cmd = new SqlCommand(query,con);
+            con.Open();
+            SqlDataReader rd = cmd.ExecuteReader();
+            if (rd.Read())
+            {
+                v.id_MetodoPago = int.Parse(rd["id"].ToString());
+            }
+            con.Close();
+
+            v.guardarventa();
+            /*
+            2
+            4
+            5*/
+            foreach (DataGridViewRow a in dgDetalle.Rows)
+            {
+                v.id_Producto = int.Parse(a.Cells[2].Value.ToString());
+                v.Cantidad = int.Parse(a.Cells[4].Value.ToString());
+                v.Importe = decimal.Parse(a.Cells[5].Value.ToString());
+                v.guardardetalle();
+            }
+        }
+
+        decimal sumatoria()
+        {
+            decimal total = 0;
+            foreach (DataGridViewRow a in dgDetalle.Rows)
+            {
+                if (a.Cells[5].Value != null)
+                {
+                    total += decimal.Parse(a.Cells[5].Value.ToString());
+                }
+            }
+            return total;
+        }
+
+        private void cbClientes_Leave(object sender, EventArgs e)
+        {
+            cbMetodos();
         }
     }
 }

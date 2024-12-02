@@ -29,7 +29,7 @@ namespace AZAMON.Busquedas
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            string query = $"select m.id,(u.Nombre + ' ' + u.A_Paterno + ' ' + A_Materno) Nombre,m.Tipo,m.Numero_Tarjeta,m.CVV,m.Fecha_Vencimiento,m.Titular from METODO_PAGO m inner join USUARIO u on m.id_Usuario = u.id where u.Nombre like '%{txtNombre.Text}%'";
+            string query = $"select m.id,(u.Nombre + ' ' + u.A_Paterno + ' ' + A_Materno) Nombre,m.Tipo,m.Nombre_Tarjeta,m.Numero_Tarjeta,m.CVV,m.Fecha_Vencimiento,m.Titular from METODO_PAGO m inner join USUARIO u on m.id_Usuario = u.id where u.Nombre like '%{txtNombre.Text}%'";
             DataTable dt = new DataTable();
             SqlCommand cmd = new SqlCommand(query, con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);

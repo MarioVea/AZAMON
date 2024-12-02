@@ -43,7 +43,7 @@ namespace AZAMON.Clases
 
         public void guardardetalle()
         {
-            string query = $"insert into RENTA_DETALLE values ((select isnull(max(id) +1,0) from VENTA_DETALLE),{id},{id_Producto},{Cantidad},{Importe})";
+            string query = $"insert into VENTA_DETALLE values ((select isnull(max(id) +1,0) from VENTA_DETALLE),{id},{id_Producto},{Cantidad},{Importe})";
             SqlCommand cmd = new SqlCommand (query,con);
             con.Open();
             cmd.ExecuteNonQuery();
