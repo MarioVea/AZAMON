@@ -66,5 +66,17 @@ namespace AZAMON
             frmVenta a = new frmVenta();
             a.ShowDialog();
         }
+
+        private void inventarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmInventario a = new frmInventario();
+            a.ShowDialog();
+        }
+
+        private void categoríaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCategoria c = new frmCategoria();
+            c.ShowDialog();
+        }
     }
 }

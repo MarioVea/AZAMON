@@ -37,7 +37,6 @@
             this.paqueteríaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.artículosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bodegaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inventarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.carritoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.domiciliosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,6 +45,7 @@
             this.tsEntrega = new System.Windows.Forms.ToolStripButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.categoríaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -73,7 +73,8 @@
             this.vendedorToolStripMenuItem,
             this.metodoDePagoToolStripMenuItem,
             this.paqueteríaToolStripMenuItem,
-            this.productoToolStripMenuItem});
+            this.productoToolStripMenuItem,
+            this.categoríaToolStripMenuItem});
             this.catalogosToolStripMenuItem.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.catalogosToolStripMenuItem.Name = "catalogosToolStripMenuItem";
             this.catalogosToolStripMenuItem.Size = new System.Drawing.Size(123, 27);
@@ -117,7 +118,6 @@
             // artículosToolStripMenuItem
             // 
             this.artículosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bodegaToolStripMenuItem,
             this.inventarioToolStripMenuItem,
             this.carritoToolStripMenuItem});
             this.artículosToolStripMenuItem.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -125,23 +125,17 @@
             this.artículosToolStripMenuItem.Size = new System.Drawing.Size(116, 27);
             this.artículosToolStripMenuItem.Text = "Artículos";
             // 
-            // bodegaToolStripMenuItem
-            // 
-            this.bodegaToolStripMenuItem.Name = "bodegaToolStripMenuItem";
-            this.bodegaToolStripMenuItem.Size = new System.Drawing.Size(201, 28);
-            this.bodegaToolStripMenuItem.Text = "Almacen";
-            this.bodegaToolStripMenuItem.Click += new System.EventHandler(this.bodegaToolStripMenuItem_Click);
-            // 
             // inventarioToolStripMenuItem
             // 
             this.inventarioToolStripMenuItem.Name = "inventarioToolStripMenuItem";
-            this.inventarioToolStripMenuItem.Size = new System.Drawing.Size(201, 28);
+            this.inventarioToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
             this.inventarioToolStripMenuItem.Text = "Inventario";
+            this.inventarioToolStripMenuItem.Click += new System.EventHandler(this.inventarioToolStripMenuItem_Click);
             // 
             // carritoToolStripMenuItem
             // 
             this.carritoToolStripMenuItem.Name = "carritoToolStripMenuItem";
-            this.carritoToolStripMenuItem.Size = new System.Drawing.Size(201, 28);
+            this.carritoToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
             this.carritoToolStripMenuItem.Text = "Carrito";
             // 
             // domiciliosToolStripMenuItem
@@ -162,7 +156,7 @@
             this.tsEntrega});
             this.toolStrip1.Location = new System.Drawing.Point(0, 31);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(40, 616);
+            this.toolStrip1.Size = new System.Drawing.Size(37, 616);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -173,7 +167,7 @@
             this.tsVenta.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsVenta.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsVenta.Name = "tsVenta";
-            this.tsVenta.Size = new System.Drawing.Size(37, 36);
+            this.tsVenta.Size = new System.Drawing.Size(34, 36);
             this.tsVenta.Text = "Venta";
             this.tsVenta.Click += new System.EventHandler(this.tsVenta_Click);
             // 
@@ -184,7 +178,7 @@
             this.tsEntrega.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsEntrega.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsEntrega.Name = "tsEntrega";
-            this.tsEntrega.Size = new System.Drawing.Size(37, 36);
+            this.tsEntrega.Size = new System.Drawing.Size(34, 36);
             this.tsEntrega.Text = "Entrega";
             // 
             // pictureBox1
@@ -206,6 +200,13 @@
             this.label1.Size = new System.Drawing.Size(399, 38);
             this.label1.TabIndex = 3;
             this.label1.Text = "Bienvenido a AZAMON";
+            // 
+            // categoríaToolStripMenuItem
+            // 
+            this.categoríaToolStripMenuItem.Name = "categoríaToolStripMenuItem";
+            this.categoríaToolStripMenuItem.Size = new System.Drawing.Size(252, 28);
+            this.categoríaToolStripMenuItem.Text = "Categoría";
+            this.categoríaToolStripMenuItem.Click += new System.EventHandler(this.categoríaToolStripMenuItem_Click);
             // 
             // frmMenu
             // 
@@ -241,7 +242,6 @@
         private System.Windows.Forms.ToolStripMenuItem paqueteríaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem productoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem artículosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem bodegaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inventarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem carritoToolStripMenuItem;
         private System.Windows.Forms.ToolStrip toolStrip1;
@@ -251,6 +251,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem vendedorToolStripMenuItem;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem categoríaToolStripMenuItem;
     }
 }
 

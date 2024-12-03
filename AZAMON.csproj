@@ -67,6 +67,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Busquedas\frmBusquedaCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busquedas\frmBusquedaCategoria.Designer.cs">
+      <DependentUpon>frmBusquedaCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Busquedas\frmBusquedaInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busquedas\frmBusquedaInventario.Designer.cs">
+      <DependentUpon>frmBusquedaInventario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Busquedas\frmBusquedaDomicilio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,25 +115,39 @@
     <Compile Include="Busquedas\frmBusquedaVendedor.Designer.cs">
       <DependentUpon>frmBusquedaVendedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Clases\Categoria.cs" />
     <Compile Include="Clases\Conexion.cs" />
     <Compile Include="Clases\Domicilio.cs" />
+    <Compile Include="Clases\Inventario.cs" />
     <Compile Include="Clases\MetodoPago.cs" />
     <Compile Include="Clases\Paqueteria.cs" />
     <Compile Include="Clases\Usuario.cs" />
     <Compile Include="Clases\Producto.cs" />
     <Compile Include="Clases\tools.cs" />
     <Compile Include="Clases\Venta.cs" />
-    <Compile Include="formularios\frmAlmacen.cs">
+    <Compile Include="formularios\frmCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formularios\frmAlmacen.Designer.cs">
-      <DependentUpon>frmAlmacen.cs</DependentUpon>
+    <Compile Include="formularios\frmCategoria.Designer.cs">
+      <DependentUpon>frmCategoria.cs</DependentUpon>
     </Compile>
     <Compile Include="formularios\frmDomicilio.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="formularios\frmDomicilio.Designer.cs">
       <DependentUpon>frmDomicilio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\frmEntrega.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\frmEntrega.Designer.cs">
+      <DependentUpon>frmEntrega.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\frmInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\frmInventario.Designer.cs">
+      <DependentUpon>frmInventario.cs</DependentUpon>
     </Compile>
     <Compile Include="formularios\frmMenu.cs">
       <SubType>Form</SubType>
@@ -161,6 +187,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Busquedas\frmBusquedaCategoria.resx">
+      <DependentUpon>frmBusquedaCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Busquedas\frmBusquedaInventario.resx">
+      <DependentUpon>frmBusquedaInventario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Busquedas\frmBusquedaDomicilio.resx">
       <DependentUpon>frmBusquedaDomicilio.cs</DependentUpon>
     </EmbeddedResource>
@@ -179,11 +211,17 @@
     <EmbeddedResource Include="Busquedas\frmBusquedaVendedor.resx">
       <DependentUpon>frmBusquedaVendedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formularios\frmAlmacen.resx">
-      <DependentUpon>frmAlmacen.cs</DependentUpon>
+    <EmbeddedResource Include="formularios\frmCategoria.resx">
+      <DependentUpon>frmCategoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formularios\frmDomicilio.resx">
       <DependentUpon>frmDomicilio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\frmEntrega.resx">
+      <DependentUpon>frmEntrega.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\frmInventario.resx">
+      <DependentUpon>frmInventario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formularios\frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>

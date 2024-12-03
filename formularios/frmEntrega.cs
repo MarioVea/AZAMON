@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace AZAMON.formularios
 {
-    public partial class frmAlmacen : Form
+    public partial class frmEntrega : Form
     {
-        public frmAlmacen()
+        public frmEntrega()
         {
             InitializeComponent();
+        }
+
+        private void frmEntrega_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

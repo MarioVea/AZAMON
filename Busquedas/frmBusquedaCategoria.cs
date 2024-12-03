@@ -12,31 +12,31 @@ using System.Windows.Forms;
 
 namespace AZAMON.Busquedas
 {
-    public partial class frmBusquedaVendedor : Form
+    public partial class frmBusquedaCategoria : Form
     {
         Conexion Conexion = new Conexion();
         SqlConnection con = new SqlConnection();
-        public frmBusquedaVendedor()
+        public frmBusquedaCategoria()
         {
-            InitializeComponent();
             con.ConnectionString = Conexion.conexion;
+            InitializeComponent();
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.OK;
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            string query = $"select u.Nombre,u.A_Paterno,u.A_Materno from USUARIO u inner join VENDEDOR v on u.id = v.id_Usuario where u.Nombre like '%{txtNombre.Text}%'";
+            string query = $"select * from CATEGORIA where Nombre like '%{txtNombre.Text}%'"; 
             SqlCommand cmd = new SqlCommand(query, con);
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             con.Open();
             da.Fill(dt);
             con.Close();
-            dgVendedores.DataSource = dt;
-        }
-
-        private void btnAceptar_Click(object sender, EventArgs e)
-        {
-            DialogResult = DialogResult.OK;
+            dgCategorias.DataSource = dt;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
