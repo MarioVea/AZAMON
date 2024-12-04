@@ -45,6 +45,7 @@
             this.cbConcepto = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.cbProducto = new System.Windows.Forms.ComboBox();
+            this.btnImprimir = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -201,12 +202,23 @@
             this.cbProducto.TabIndex = 27;
             this.cbProducto.Leave += new System.EventHandler(this.cbProducto_Leave);
             // 
+            // btnImprimir
+            // 
+            this.btnImprimir.Location = new System.Drawing.Point(221, 336);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(129, 47);
+            this.btnImprimir.TabIndex = 28;
+            this.btnImprimir.Text = "Imprimir";
+            this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
+            // 
             // frmInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(631, 454);
+            this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.cbProducto);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cbConcepto);
@@ -251,5 +263,6 @@
         private System.Windows.Forms.ComboBox cbConcepto;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cbProducto;
+        private System.Windows.Forms.Button btnImprimir;
     }
 }

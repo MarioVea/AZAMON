@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsrInventario" targetNamespace="http://tempuri.org/dsrInventario.xsd" xmlns:mstns="http://tempuri.org/dsrInventario.xsd" xmlns="http://tempuri.org/dsrInventario.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="AZAMONConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="AZAMONConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.AZAMON.Properties.Settings.GlobalReference.Default.AZAMONConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vInventarioTableAdapter" GeneratorDataComponentClassName="vInventarioTableAdapter" Name="vInventario" UserDataComponentName="vInventarioTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="AZAMONConnectionString (Settings)" DbObjectName="AZAMON.dbo.vInventario" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Inventario_id, id_Producto, Nombre, Existencia FROM dbo.vInventario</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Inventario_id" DataSetColumn="Inventario_id" />
+              <Mapping SourceColumn="id_Producto" DataSetColumn="id_Producto" />
+              <Mapping SourceColumn="Nombre" DataSetColumn="Nombre" />
+              <Mapping SourceColumn="Existencia" DataSetColumn="Existencia" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsrInventario" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="dsrInventario" msprop:Generator_DataSetName="dsrInventario">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vInventario" msprop:Generator_RowEvHandlerName="vInventarioRowChangeEventHandler" msprop:Generator_RowDeletedName="vInventarioRowDeleted" msprop:Generator_RowDeletingName="vInventarioRowDeleting" msprop:Generator_RowEvArgName="vInventarioRowChangeEvent" msprop:Generator_TablePropName="vInventario" msprop:Generator_RowChangedName="vInventarioRowChanged" msprop:Generator_RowChangingName="vInventarioRowChanging" msprop:Generator_TableClassName="vInventarioDataTable" msprop:Generator_RowClassName="vInventarioRow" msprop:Generator_TableVarName="tablevInventario" msprop:Generator_UserTableName="vInventario">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Inventario_id" msprop:Generator_ColumnPropNameInRow="Inventario_id" msprop:Generator_ColumnPropNameInTable="Inventario_idColumn" msprop:Generator_ColumnVarNameInTable="columnInventario_id" msprop:Generator_UserColumnName="Inventario_id" type="xs:int" />
+              <xs:element name="id_Producto" msprop:Generator_ColumnPropNameInRow="id_Producto" msprop:Generator_ColumnPropNameInTable="id_ProductoColumn" msprop:Generator_ColumnVarNameInTable="columnid_Producto" msprop:Generator_UserColumnName="id_Producto" type="xs:int" />
+              <xs:element name="Nombre" msprop:Generator_ColumnPropNameInRow="Nombre" msprop:Generator_ColumnPropNameInTable="NombreColumn" msprop:Generator_ColumnVarNameInTable="columnNombre" msprop:Generator_UserColumnName="Nombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Existencia" msprop:Generator_ColumnPropNameInRow="Existencia" msprop:Generator_ColumnPropNameInTable="ExistenciaColumn" msprop:Generator_ColumnVarNameInTable="columnExistencia" msprop:Generator_UserColumnName="Existencia" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vInventario" />
+      <xs:field xpath="mstns:Inventario_id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

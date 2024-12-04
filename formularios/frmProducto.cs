@@ -122,5 +122,11 @@ namespace AZAMON.formularios
             }
             con.Close();
         }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            frmRProductos a = new frmRProductos();
+            a.ShowDialog();
+        }
     }
 }

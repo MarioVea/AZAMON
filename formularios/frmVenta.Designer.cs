@@ -150,6 +150,7 @@
             this.btnBuscar.Size = new System.Drawing.Size(54, 51);
             this.btnBuscar.TabIndex = 10;
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // cbClientes
             // 

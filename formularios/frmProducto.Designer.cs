@@ -45,6 +45,7 @@
             this.tsLimpiar = new System.Windows.Forms.ToolStripButton();
             this.tsEliminar = new System.Windows.Forms.ToolStripButton();
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnImprimir = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -205,6 +206,17 @@
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
+            // btnImprimir
+            // 
+            this.btnImprimir.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImprimir.Location = new System.Drawing.Point(512, 196);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(168, 51);
+            this.btnImprimir.TabIndex = 14;
+            this.btnImprimir.Text = "Imprimir";
+            this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
+            // 
             // frmProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 23F);
@@ -212,6 +224,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(791, 551);
+            this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.rtxtDescripcion);
@@ -257,5 +270,6 @@
         private System.Windows.Forms.ToolStripButton tsLimpiar;
         private System.Windows.Forms.ToolStripButton tsEliminar;
         private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Button btnImprimir;
     }
 }

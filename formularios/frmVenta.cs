@@ -1,4 +1,5 @@
-﻿using AZAMON.Clases;
+﻿using AZAMON.Busquedas;
+using AZAMON.Clases;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -211,6 +212,18 @@ namespace AZAMON.formularios
         private void cbClientes_Leave(object sender, EventArgs e)
         {
             cbMetodos();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            frmBusquedaVenta a = new frmBusquedaVenta();
+            a.ShowDialog();
+            if(a.DialogResult == DialogResult.OK)
+            {
+                txtId.Text = a.dsvVenta.vVenta[a.vVentaBindingSource.Position].id.ToString();
+                dtpFecha.Value = Convert.ToDateTime(a.dsvVenta.vVenta[a.vVentaBindingSource.Position].Fecha.ToString());
+                cbClientes.SelectedValue = a.dsvVenta.vVenta[a.vVentaBindingSource.Position].;
+            }
         }
     }
 }
