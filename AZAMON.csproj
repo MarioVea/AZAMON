@@ -73,6 +73,12 @@
     <Compile Include="Busquedas\frmBusquedaCategoria.Designer.cs">
       <DependentUpon>frmBusquedaCategoria.cs</DependentUpon>
     </Compile>
+    <Compile Include="Busquedas\frmBusquedaEntrega.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busquedas\frmBusquedaEntrega.Designer.cs">
+      <DependentUpon>frmBusquedaEntrega.cs</DependentUpon>
+    </Compile>
     <Compile Include="Busquedas\frmBusquedaInventario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +124,7 @@
     <Compile Include="Clases\Categoria.cs" />
     <Compile Include="Clases\Conexion.cs" />
     <Compile Include="Clases\Domicilio.cs" />
+    <Compile Include="Clases\Entrega.cs" />
     <Compile Include="Clases\Inventario.cs" />
     <Compile Include="Clases\MetodoPago.cs" />
     <Compile Include="Clases\Paqueteria.cs" />
@@ -189,6 +196,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Busquedas\frmBusquedaCategoria.resx">
       <DependentUpon>frmBusquedaCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Busquedas\frmBusquedaEntrega.resx">
+      <DependentUpon>frmBusquedaEntrega.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Busquedas\frmBusquedaInventario.resx">
       <DependentUpon>frmBusquedaInventario.cs</DependentUpon>

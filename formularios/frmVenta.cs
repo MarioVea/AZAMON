@@ -124,6 +124,10 @@ namespace AZAMON.formularios
             cbMetodo.DisplayMember = "Nombre_Tarjeta";
             cbMetodo.ValueMember = "Tipo";
             cbMetodo.DataSource = dt;
+            if (cbMetodo.Items.Count == 0)
+            {
+                MessageBox.Show("El usuario no cuenta con ningún metodo de pago");
+            }
         }
         void cbProducto()
         {

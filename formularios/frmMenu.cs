@@ -55,12 +55,6 @@ namespace AZAMON
             a.ShowDialog();
         }
 
-        private void bodegaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmAlmacen a = new frmAlmacen();
-            a.ShowDialog();
-        }
-
         private void tsVenta_Click(object sender, EventArgs e)
         {
             frmVenta a = new frmVenta();
@@ -77,6 +71,12 @@ namespace AZAMON
         {
             frmCategoria c = new frmCategoria();
             c.ShowDialog();
+        }
+
+        private void tsEntrega_Click(object sender, EventArgs e)
+        {
+            frmEntrega a = new frmEntrega();
+            a.ShowDialog();
         }
     }
 }
