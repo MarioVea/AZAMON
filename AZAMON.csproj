@@ -67,6 +67,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AZAMONDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AZAMONDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Busquedas\frmBusquedaCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,6 +168,16 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsvVenta.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsvVenta1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsvVenta1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsvVentas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsvVentas.xsd</DependentUpon>
     </Compile>
     <Compile Include="formularios\frmCategoria.cs">
       <SubType>Form</SubType>
@@ -315,6 +330,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="AZAMONDataSet.xsc">
+      <DependentUpon>AZAMONDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AZAMONDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AZAMONDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AZAMONDataSet.xss">
+      <DependentUpon>AZAMONDataSet.xsd</DependentUpon>
+    </None>
     <None Include="dsrInventario.xsc">
       <DependentUpon>dsrInventario.xsd</DependentUpon>
     </None>
@@ -369,6 +395,28 @@
     </None>
     <None Include="dsvVenta.xss">
       <DependentUpon>dsvVenta.xsd</DependentUpon>
+    </None>
+    <None Include="dsvVenta1.xsc">
+      <DependentUpon>dsvVenta1.xsd</DependentUpon>
+    </None>
+    <None Include="dsvVenta1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsvVenta1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsvVenta1.xss">
+      <DependentUpon>dsvVenta1.xsd</DependentUpon>
+    </None>
+    <None Include="dsvVentas.xsc">
+      <DependentUpon>dsvVentas.xsd</DependentUpon>
+    </None>
+    <None Include="dsvVentas.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsvVentas.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsvVentas.xss">
+      <DependentUpon>dsvVentas.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

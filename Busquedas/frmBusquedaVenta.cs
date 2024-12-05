@@ -28,8 +28,13 @@ namespace AZAMON.Busquedas
 
         private void frmBusquedaVenta_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'dsvVenta1.vVenta' Puede moverla o quitarla según sea necesario.
+            this.vVentaTableAdapter3.Fill(this.dsvVenta1.vVenta);
+            // TODO: esta línea de código carga datos en la tabla 'aZAMONDataSet.vVenta' Puede moverla o quitarla según sea necesario.
+            // TODO: esta línea de código carga datos en la tabla 'dsvVentas.vVenta' Puede moverla o quitarla según sea necesario.
+            this.vVentaTableAdapter1.Fill(this.dsvVentas.vVenta);
             // TODO: esta línea de código carga datos en la tabla 'dsvDetalle.vDetalle' Puede moverla o quitarla según sea necesario.
-           // this.vDetalleTableAdapter.Fill(this.dsvDetalle.vDetalle);
+            // this.vDetalleTableAdapter.Fill(this.dsvDetalle.vDetalle);
             // TODO: esta línea de código carga datos en la tabla 'dsvVenta.vVenta' Puede moverla o quitarla según sea necesario.
             this.vVentaTableAdapter.Fill(this.dsvVenta.vVenta);
 
@@ -43,6 +48,11 @@ namespace AZAMON.Busquedas
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.OK;
+        }
+
+        private void dgVenta_SelectionChanged_1(object sender, EventArgs e)
+        {
+            cargardetalle(dsvVenta1.vVenta[vVentaBindingSource2.Position].id);
         }
     }
 }

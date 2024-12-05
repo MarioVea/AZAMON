@@ -220,9 +220,13 @@ namespace AZAMON.formularios
             a.ShowDialog();
             if(a.DialogResult == DialogResult.OK)
             {
-                txtId.Text = a.dsvVenta.vVenta[a.vVentaBindingSource.Position].id.ToString();
-                dtpFecha.Value = Convert.ToDateTime(a.dsvVenta.vVenta[a.vVentaBindingSource.Position].Fecha.ToString());
-                cbClientes.SelectedValue = a.dsvVenta.vVenta[a.vVentaBindingSource.Position].;
+                txtId.Text = a.dsvVenta1.vVenta[a.vVentaBindingSource2.Position].id.ToString();
+                dtpFecha.Value = Convert.ToDateTime(a.dsvVenta1.vVenta[a.vVentaBindingSource2.Position].Fecha.ToString());
+                cbClientes.SelectedValue = a.dsvVenta1.vVenta[a.vVentaBindingSource2.Position].id_Usuario.ToString();
+                cbVendedores.SelectedValue = a.dsvVenta1.vVenta[a.vVentaBindingSource2.Position].id_Vendedor.ToString();
+                cbMetodo.SelectedIndex = int.Parse(a.dsvVenta1.vVenta[a.vVentaBindingSource2.Position].Tipo_Metodo.ToString());
+                txtTotal.Text = "$" + a.dsvVenta1.vVenta[a.vVentaBindingSource2.Position].Total.ToString();
+                dgDetalle.DataSource = a.dsvDetalle.vDetalle;
             }
         }
     }
