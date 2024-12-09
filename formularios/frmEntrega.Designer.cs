@@ -43,7 +43,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.dgEntregas = new System.Windows.Forms.DataGridView();
-            this.btnAceptar = new System.Windows.Forms.Button();
             this.cbEstado = new System.Windows.Forms.ComboBox();
             this.cbPaqueteria = new System.Windows.Forms.ComboBox();
             this.cbVendedores = new System.Windows.Forms.ComboBox();
@@ -194,15 +193,6 @@
             this.dgEntregas.Size = new System.Drawing.Size(740, 244);
             this.dgEntregas.TabIndex = 29;
             // 
-            // btnAceptar
-            // 
-            this.btnAceptar.Location = new System.Drawing.Point(770, 499);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(171, 42);
-            this.btnAceptar.TabIndex = 30;
-            this.btnAceptar.Text = "Aceptar";
-            this.btnAceptar.UseVisualStyleBackColor = true;
-            // 
             // cbEstado
             // 
             this.cbEstado.FormattingEnabled = true;
@@ -247,7 +237,6 @@
             this.Controls.Add(this.cbVendedores);
             this.Controls.Add(this.cbPaqueteria);
             this.Controls.Add(this.cbEstado);
-            this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.dgEntregas);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -287,7 +276,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dgEntregas;
-        private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.ComboBox cbEstado;
         private System.Windows.Forms.ComboBox cbPaqueteria;
         private System.Windows.Forms.ComboBox cbVendedores;

@@ -54,6 +54,7 @@
             this.chbvendedor = new System.Windows.Forms.CheckBox();
             this.txtRFC = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.btnImprimir = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -264,9 +265,12 @@
             this.chbvendedor.TabIndex = 33;
             this.chbvendedor.Text = "Registrarme como vendedor";
             this.chbvendedor.UseVisualStyleBackColor = true;
+            this.chbvendedor.CheckedChanged += new System.EventHandler(this.chbvendedor_CheckedChanged);
+            this.chbvendedor.Leave += new System.EventHandler(this.chbvendedor_Leave);
             // 
             // txtRFC
             // 
+            this.txtRFC.Enabled = false;
             this.txtRFC.Location = new System.Drawing.Point(684, 237);
             this.txtRFC.Name = "txtRFC";
             this.txtRFC.Size = new System.Drawing.Size(224, 31);
@@ -281,12 +285,23 @@
             this.label8.TabIndex = 35;
             this.label8.Text = "RFC";
             // 
+            // btnImprimir
+            // 
+            this.btnImprimir.Location = new System.Drawing.Point(834, 282);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(121, 41);
+            this.btnImprimir.TabIndex = 36;
+            this.btnImprimir.Text = "Imprimir";
+            this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
+            // 
             // frmUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1099, 565);
+            this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtRFC);
             this.Controls.Add(this.chbvendedor);
@@ -347,5 +362,6 @@
         private System.Windows.Forms.CheckBox chbvendedor;
         private System.Windows.Forms.TextBox txtRFC;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnImprimir;
     }
 }

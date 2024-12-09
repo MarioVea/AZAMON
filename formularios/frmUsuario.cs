@@ -133,5 +133,25 @@ namespace AZAMON.formularios
             }
             con.Close();
         }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            frmRUsuarios a = new frmRUsuarios();
+            a.ShowDialog();
+        }
+
+        private void chbvendedor_Leave(object sender, EventArgs e)
+        {
+            if (chbvendedor.Checked)
+            {
+                txtRFC.Enabled = true;
+            }
+            else txtRFC.Enabled = false;
+        }
+
+        private void chbvendedor_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

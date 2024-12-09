@@ -39,7 +39,6 @@
             this.categoríaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.artículosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inventarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.carritoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.domiciliosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsVenta = new System.Windows.Forms.ToolStripButton();
@@ -125,8 +124,7 @@
             // artículosToolStripMenuItem
             // 
             this.artículosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.inventarioToolStripMenuItem,
-            this.carritoToolStripMenuItem});
+            this.inventarioToolStripMenuItem});
             this.artículosToolStripMenuItem.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.artículosToolStripMenuItem.Name = "artículosToolStripMenuItem";
             this.artículosToolStripMenuItem.Size = new System.Drawing.Size(116, 27);
@@ -135,15 +133,9 @@
             // inventarioToolStripMenuItem
             // 
             this.inventarioToolStripMenuItem.Name = "inventarioToolStripMenuItem";
-            this.inventarioToolStripMenuItem.Size = new System.Drawing.Size(201, 28);
+            this.inventarioToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
             this.inventarioToolStripMenuItem.Text = "Inventario";
             this.inventarioToolStripMenuItem.Click += new System.EventHandler(this.inventarioToolStripMenuItem_Click);
-            // 
-            // carritoToolStripMenuItem
-            // 
-            this.carritoToolStripMenuItem.Name = "carritoToolStripMenuItem";
-            this.carritoToolStripMenuItem.Size = new System.Drawing.Size(201, 28);
-            this.carritoToolStripMenuItem.Text = "Carrito";
             // 
             // domiciliosToolStripMenuItem
             // 
@@ -163,7 +155,7 @@
             this.tsEntrega});
             this.toolStrip1.Location = new System.Drawing.Point(0, 31);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(40, 616);
+            this.toolStrip1.Size = new System.Drawing.Size(37, 616);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -174,7 +166,7 @@
             this.tsVenta.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsVenta.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsVenta.Name = "tsVenta";
-            this.tsVenta.Size = new System.Drawing.Size(37, 36);
+            this.tsVenta.Size = new System.Drawing.Size(34, 36);
             this.tsVenta.Text = "Venta";
             this.tsVenta.Click += new System.EventHandler(this.tsVenta_Click);
             // 
@@ -185,7 +177,7 @@
             this.tsEntrega.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsEntrega.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsEntrega.Name = "tsEntrega";
-            this.tsEntrega.Size = new System.Drawing.Size(37, 36);
+            this.tsEntrega.Size = new System.Drawing.Size(34, 36);
             this.tsEntrega.Text = "Entrega";
             this.tsEntrega.Click += new System.EventHandler(this.tsEntrega_Click);
             // 
@@ -244,7 +236,6 @@
         private System.Windows.Forms.ToolStripMenuItem productoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem artículosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inventarioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem carritoToolStripMenuItem;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton tsVenta;
         private System.Windows.Forms.ToolStripButton tsEntrega;

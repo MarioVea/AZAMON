@@ -42,7 +42,7 @@
             this.vVentaTableAdapter = new AZAMON.dsvVentaTableAdapters.vVentaTableAdapter();
             this.vDetalleTableAdapter = new AZAMON.dsvDetalleTableAdapters.vDetalleTableAdapter();
             this.btnAceptar = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.dsvVentas = new AZAMON.dsvVentas();
             this.vVentaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.vVentaTableAdapter1 = new AZAMON.dsvVentasTableAdapters.vVentaTableAdapter();
@@ -182,14 +182,15 @@
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
-            // button2
+            // btnCancelar
             // 
-            this.button2.Location = new System.Drawing.Point(923, 597);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(98, 50);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnCancelar.Location = new System.Drawing.Point(923, 597);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(98, 50);
+            this.btnCancelar.TabIndex = 3;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // dsvVentas
             // 
@@ -352,7 +353,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1100, 816);
             this.Controls.Add(this.dgVenta);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.dataGridView2);
             this.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -391,7 +392,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidadDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn importeDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btnAceptar;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnCancelar;
         private dsvVentas dsvVentas;
         private System.Windows.Forms.BindingSource vVentaBindingSource1;
         private dsvVentasTableAdapters.vVentaTableAdapter vVentaTableAdapter1;

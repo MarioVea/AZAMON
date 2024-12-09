@@ -154,15 +154,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsvDetalle.xsd</DependentUpon>
     </Compile>
-    <Compile Include="dsvInventario.Designer.cs">
+    <Compile Include="dsvInventario1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>dsvInventario.xsd</DependentUpon>
+      <DependentUpon>dsvInventario1.xsd</DependentUpon>
     </Compile>
     <Compile Include="dsvProductos.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsvProductos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsvUsuarios.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsvUsuarios.xsd</DependentUpon>
     </Compile>
     <Compile Include="dsvVenta.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -239,6 +244,12 @@
     <Compile Include="formularios\frmRProductos.Designer.cs">
       <DependentUpon>frmRProductos.cs</DependentUpon>
     </Compile>
+    <Compile Include="formularios\frmRUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\frmRUsuarios.Designer.cs">
+      <DependentUpon>frmRUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="formularios\frmUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -313,6 +324,9 @@
     <EmbeddedResource Include="formularios\frmRProductos.resx">
       <DependentUpon>frmRProductos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="formularios\frmRUsuarios.resx">
+      <DependentUpon>frmRUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formularios\frmUsuario.resx">
       <DependentUpon>frmUsuario.cs</DependentUpon>
     </EmbeddedResource>
@@ -321,6 +335,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="INFORMES\RInventario.rdlc" />
     <EmbeddedResource Include="INFORMES\RProductos.rdlc" />
+    <EmbeddedResource Include="INFORMES\RUsuarios.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -363,16 +378,16 @@
     <None Include="dsvDetalle.xss">
       <DependentUpon>dsvDetalle.xsd</DependentUpon>
     </None>
-    <None Include="dsvInventario.xsc">
-      <DependentUpon>dsvInventario.xsd</DependentUpon>
+    <None Include="dsvInventario1.xsc">
+      <DependentUpon>dsvInventario1.xsd</DependentUpon>
     </None>
-    <None Include="dsvInventario.xsd">
+    <None Include="dsvInventario1.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dsvInventario.Designer.cs</LastGenOutput>
+      <LastGenOutput>dsvInventario1.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="dsvInventario.xss">
-      <DependentUpon>dsvInventario.xsd</DependentUpon>
+    <None Include="dsvInventario1.xss">
+      <DependentUpon>dsvInventario1.xsd</DependentUpon>
     </None>
     <None Include="dsvProductos.xsc">
       <DependentUpon>dsvProductos.xsd</DependentUpon>
@@ -384,6 +399,17 @@
     </None>
     <None Include="dsvProductos.xss">
       <DependentUpon>dsvProductos.xsd</DependentUpon>
+    </None>
+    <None Include="dsvUsuarios.xsc">
+      <DependentUpon>dsvUsuarios.xsd</DependentUpon>
+    </None>
+    <None Include="dsvUsuarios.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsvUsuarios.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsvUsuarios.xss">
+      <DependentUpon>dsvUsuarios.xsd</DependentUpon>
     </None>
     <None Include="dsvVenta.xsc">
       <DependentUpon>dsvVenta.xsd</DependentUpon>

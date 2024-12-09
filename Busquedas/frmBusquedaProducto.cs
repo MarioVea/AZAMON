@@ -24,14 +24,17 @@ namespace AZAMON.Busquedas
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            buscar();
+        }
+        void buscar()
+        {
             string query = $"select p.id,p.Nombre as Producto,p.Descripcion,p.Precio,c.id as idCategoria,c.Nombre as  Categoria from PRODUCTO p inner join CATEGORIA c on p.id_Categoria = c.id where p.Nombre like '%{txtNombre.Text}%'";
             DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(query,con);
+            SqlDataAdapter da = new SqlDataAdapter(query, con);
             con.Open();
             da.Fill(dt);
             con.Close();
             dgProductos.DataSource = dt;
-
         }
 
         private void dgProductos_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -48,6 +51,11 @@ namespace AZAMON.Busquedas
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             DialogResult= DialogResult.Cancel;
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            buscar();
         }
     }
 }

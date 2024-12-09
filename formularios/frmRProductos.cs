@@ -43,8 +43,6 @@ namespace AZAMON.formularios
             cbNombre.ValueMember = "id";
             cbNombre.DisplayMember = "Nombre";
             cbNombre.DataSource = dt;
-
-
         }
 
         void cargareporte()

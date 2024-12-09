@@ -39,7 +39,7 @@ namespace AZAMON.formularios
                 int existencia = int.Parse(txtExistencia.Text);
                 if (cbConcepto.SelectedIndex == 0)
                 {
-                    if (cantidad < existencia)
+                    if (cantidad <= existencia)
                     {
                         i.Existencia = existencia - cantidad;
                         MessageBox.Show(i.guardar());

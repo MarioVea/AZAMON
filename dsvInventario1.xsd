@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="dsvInventario" targetNamespace="http://tempuri.org/dsvInventario.xsd" xmlns:mstns="http://tempuri.org/dsvInventario.xsd" xmlns="http://tempuri.org/dsvInventario.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="dsvInventario1" targetNamespace="http://tempuri.org/dsvInventario1.xsd" xmlns:mstns="http://tempuri.org/dsvInventario1.xsd" xmlns="http://tempuri.org/dsvInventario1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
@@ -31,7 +31,7 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="dsvInventario" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="dsvInventario" msprop:Generator_DataSetName="dsvInventario">
+  <xs:element name="dsvInventario1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="dsvInventario1" msprop:Generator_DataSetName="dsvInventario1">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="vInventario" msprop:Generator_RowEvHandlerName="vInventarioRowChangeEventHandler" msprop:Generator_RowDeletedName="vInventarioRowDeleted" msprop:Generator_RowDeletingName="vInventarioRowDeleting" msprop:Generator_RowEvArgName="vInventarioRowChangeEvent" msprop:Generator_TablePropName="vInventario" msprop:Generator_RowChangedName="vInventarioRowChanged" msprop:Generator_RowChangingName="vInventarioRowChanging" msprop:Generator_TableClassName="vInventarioDataTable" msprop:Generator_RowClassName="vInventarioRow" msprop:Generator_TableVarName="tablevInventario" msprop:Generator_UserTableName="vInventario">

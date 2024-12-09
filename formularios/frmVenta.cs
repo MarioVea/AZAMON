@@ -147,20 +147,22 @@ namespace AZAMON.formularios
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            agregar();
-            if (dgDetalle.Rows.Count > 0)
-            {
-                txtTotal.Text = sumatoria().ToString();
-            }
+                agregar();
+                if (dgDetalle.Rows.Count > 0)
+                {
+                    txtTotal.Text = sumatoria().ToString();
+                }
+            
         }
-
         private void txtCantidad_Leave(object sender, EventArgs e)
         {
             txtImporte.Text = Convert.ToString(int.Parse(txtCantidad.Text) * obtenerprecio());
+
         }
 
-        private void btnAceptar_Click(object sender, EventArgs e)
-        {
+        void guardar()
+        { 
+            tools t = new tools();
             Venta v = new Venta
             {
                 id = int.Parse(txtId.Text),
@@ -173,7 +175,7 @@ namespace AZAMON.formularios
             int cliente = int.Parse(cbClientes.SelectedValue.ToString());
             int tipo = int.Parse(cbMetodo.SelectedValue.ToString());
             string query = $"select * from METODO_PAGO where id_Usuario = {cliente} and Tipo = {tipo}";
-            SqlCommand cmd = new SqlCommand(query,con);
+            SqlCommand cmd = new SqlCommand(query, con);
             con.Open();
             SqlDataReader rd = cmd.ExecuteReader();
             if (rd.Read())
@@ -214,17 +216,83 @@ namespace AZAMON.formularios
             cbMetodos();
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
+        void eliminar()
+        {
+            string query = $"delete from VENTA where id = {int.Parse(txtId.Text)}";
+            SqlCommand cmd = new SqlCommand(query, con);
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.Cancel;
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
         {
             frmBusquedaVenta a = new frmBusquedaVenta();
             a.ShowDialog();
-            if(a.DialogResult == DialogResult.OK)
+            if (a.DialogResult == DialogResult.OK)
             {
                 txtId.Text = a.dsvVenta1.vVenta[a.vVentaBindingSource2.Position].id.ToString();
                 dtpFecha.Value = Convert.ToDateTime(a.dsvVenta1.vVenta[a.vVentaBindingSource2.Position].Fecha.ToString());
                 cbClientes.SelectedValue = a.dsvVenta1.vVenta[a.vVentaBindingSource2.Position].id_Usuario.ToString();
                 cbVendedores.SelectedValue = a.dsvVenta1.vVenta[a.vVentaBindingSource2.Position].id_Vendedor.ToString();
-                cbMetodo.SelectedIndex = int.Parse(a.dsvVenta1.vVenta[a.vVentaBindingSource2.Position].Tipo_Metodo.ToString());
+                cbMetodo.SelectedValue = int.Parse(a.dsvVenta1.vVenta[a.vVentaBindingSource2.Position].Tipo_Metodo.ToString());
+                txtTotal.Text = "$" + 0;
+                dt.Clear();
+                dgDetalle.DataSource = dt;
+            }
+        }
+
+        private void txGuardar_Click(object sender, EventArgs e)
+        {
+            tools t = new tools();
+            if (t.encontrar("VENTA", int.Parse(txtId.Text)))
+            {
+                eliminar();
+                guardar();
+                MessageBox.Show("La venta se actualizó correctamente");
+                dt.Clear();
+                dgDetalle.DataSource = dt;
+
+            }
+            else
+            {
+                guardar();
+                MessageBox.Show("La venta se guardó correctamente");
+                dgDetalle.DataSource = dt;
+
+            }
+        }
+
+        private void tsLimpiar_Click(object sender, EventArgs e)
+        {
+            tools t = new tools();
+            dt.Clear();
+            dgDetalle.DataSource = dt;
+            txtId.Text = t.consecutivo("VENTA").ToString();
+        }
+
+        private void tsEliminar_Click(object sender, EventArgs e)
+        {
+            eliminar();
+            MessageBox.Show("Se eliminó la venta");
+        }
+
+        private void tsBuscar_Click(object sender, EventArgs e)
+        {
+            frmBusquedaVenta a = new frmBusquedaVenta();
+            a.ShowDialog();
+            if (a.DialogResult == DialogResult.OK)
+            {
+                txtId.Text = a.dsvVenta1.vVenta[a.vVentaBindingSource2.Position].id.ToString();
+                dtpFecha.Value = Convert.ToDateTime(a.dsvVenta1.vVenta[a.vVentaBindingSource2.Position].Fecha.ToString());
+                cbClientes.SelectedValue = a.dsvVenta1.vVenta[a.vVentaBindingSource2.Position].id_Usuario.ToString();
+                cbVendedores.SelectedValue = a.dsvVenta1.vVenta[a.vVentaBindingSource2.Position].id_Vendedor.ToString();
+                cbMetodo.SelectedValue = int.Parse(a.dsvVenta1.vVenta[a.vVentaBindingSource2.Position].Tipo_Metodo.ToString());
                 txtTotal.Text = "$" + a.dsvVenta1.vVenta[a.vVentaBindingSource2.Position].Total.ToString();
                 dgDetalle.DataSource = a.dsvDetalle.vDetalle;
             }
